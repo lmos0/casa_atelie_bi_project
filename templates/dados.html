@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Casa Ateliê · Visualização de dados</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body class="dashboard-page">
+<header><a href="/" class="brand">Casa Ateliê</a><nav aria-label="Principal"><a href="/">Importar</a><a href="/dados" aria-current="page">Dados</a>{% include 'logout.html' %}</nav></header>
+<main><h1>Dados</h1>
+{% if erro %}<div role="alert" class="card">{{ erro }}</div>{% endif %}
+{% if data %}
+<form class="filters card" method="get" action="/dados"><label>Ano<select name="ano"><option value="">Todos os anos</option>{% for year in anos %}<option value="{{ year }}" {% if ano == year %}selected{% endif %}>{{ year }}</option>{% endfor %}</select></label><label>Oficina<select name="oficina"><option value="">Todas as oficinas</option>{% for item in oficinas %}<option value="{{ item.sk_oficina }}" {% if oficina == item.sk_oficina %}selected{% endif %}>{{ item.nome_oficina }}</option>{% endfor %}</select></label><button type="submit">Aplicar filtros</button><a href="/dados">Limpar</a></form>
+<div class="counts dashboard-counts">
+{% for value,label in [(data.interesses,'Interesses'),(data.total,'Inscrições confirmadas'),(data.pessoas,'Pessoas inscritas'),(data.ocupacao|percentual,'Ocupação'),(data.contratado|brl,'Valor contratado'),(data.recebido|brl,'Valor recebido')] %}
+<div class="metric"><span>{{ label }}</span><strong>{{ value }}</strong></div>
+{% endfor %}</div>
+{% if not data.interesses and not data.total and not data.meses and not data.ofertas %}<p class="card">Nenhum dado para este filtro. <a href="/">Importe os arquivos</a> ou selecione outro período/oficina.</p>{% endif %}
+<div class="layout dashboard-charts">
+<section class="card"><h2>Recebimentos por mês</h2>
+{% for item in data.meses %}<div class="bar-row"><div><span>{{ '%02d'|format(item.mes) }}/{{ item.ano }}</span><strong>{{ item.recebido|brl }}</strong></div><div class="bar-track"><div class="bar-fill" style="width:{{ (100 * item.recebido|float / data.max_recebido) if data.max_recebido else 0 }}%"></div></div></div>{% else %}<p>Nenhum recebimento no período.</p>{% endfor %}
+</section>
+<section class="card"><h2>Interesses por oficina</h2>{% for item in data.procura %}<div class="bar-row"><div><span>{{ item.nome_oficina }}</span><strong>{{ item.total }}</strong></div><div class="bar-track"><div class="bar-fill" style="width:{{ 100 * item.total / data.max_procura }}%"></div></div></div>{% else %}<p>Nenhum interesse no período.</p>{% endfor %}</section></div>
+<section class="card history"><h2>Ocupação por turma realizada</h2><div class="table-scroll"><table><thead><tr><th>Turma</th><th>Oficina</th><th>Início</th><th>Vagas</th><th>Confirmados</th><th>Ocupação</th></tr></thead><tbody>{% for item in data.ofertas %}<tr><td>{{ item.id_turma }}</td><td>{{ item.nome_oficina }}</td><td>{{ item.data_inicio }}</td><td>{{ item.vagas_ofertadas }}</td><td>{{ item.inscritos_confirmados }}</td><td>{{ item.ocupacao_pct|percentual }}</td></tr>{% else %}<tr><td colspan="6">Nenhuma turma realizada para este filtro.</td></tr>{% endfor %}</tbody></table></div></section>
+<details class="calculation-notes"><summary>Critérios dos indicadores</summary><p>O ano filtra a data de cada interesse, inscrição, pagamento ou início da turma. Valores recebidos consideram pagamentos liquidados; valores contratados, inscrições confirmadas. Ocupação considera turmas realizadas e corresponde ao total de confirmados dividido pelo total de vagas.</p></details>
+{% endif %}
+</main></body></html>

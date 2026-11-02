@@ -1,0 +1,4 @@
+<form class="logout-form" method="post" action="{{ url_for('logout') }}">
+  <input type="hidden" name="csrf" value="{{ session['csrf'] }}">
+  <button type="submit">Sair</button>
+</form>

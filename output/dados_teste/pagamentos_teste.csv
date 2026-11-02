@@ -1,0 +1,7 @@
+id_pagamento,id_inscricao,id_pessoa_mock,id_turma,id_oficina,data_pagamento,valor_pago,forma_pagamento,status_pagamento
+PGT001A,IST001,PT001,TST001,CROCHE,2025-05-09,60.00,pix,liquidado
+PGT001B,IST001,PT001,TST001,CROCHE,2025-05-16,60.00,pix,liquidado
+PGT002,IST002,PT002,TST001,CROCHE,2025-05-10,80.00,cartao,liquidado
+PGT003,IST003,PT001,TST002,BORDADO,2025-05-13,100.00,dinheiro,liquidado
+PGT004A,IST004,PT003,TST002,BORDADO,2025-05-14,25.00,pix,liquidado
+PGT004B,IST004,PT003,TST002,BORDADO,2025-05-21,25.00,pix,pendente

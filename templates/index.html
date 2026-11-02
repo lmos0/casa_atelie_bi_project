@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf }}">
+  <title>Casa Ateliê · Importação de dados</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+<header><a href="/" class="brand">Casa Ateliê</a><nav aria-label="Principal"><a href="/" aria-current="page">Importar</a><a href="/dados">Dados</a>{% include 'logout.html' %}</nav></header>
+<main>
+  <h1>Importar dados</h1>
+  <div class="layout">
+    <section class="card">
+      <form id="upload-form">
+        <label class="upload" for="files"><strong>Arquivos</strong><input type="file" id="files" name="arquivos" accept=".csv,.xlsx" multiple required aria-describedby="file-help"></label>
+        <p id="file-help" class="muted">CSV UTF-8 ou XLSX com uma aba. Até 4 arquivos e 10 MB por envio.</p>
+        <p id="selection" class="muted">Nenhum arquivo selecionado.</p>
+        <button type="submit" id="submit">Importar</button>
+      </form>
+      <div id="result" role="status" aria-live="polite" hidden></div>
+    </section>
+    <aside class="card guide"><h2>Arquivos de exemplo</h2>
+      <ol><li><a href="/modelos/oferta_turmas">Turmas e vagas <span>↓ CSV</span></a></li><li><a href="/modelos/interesses">Interesses <span>↓ CSV</span></a></li><li><a href="/modelos/inscricoes">Inscrições <span>↓ CSV</span></a></li><li><a href="/modelos/pagamentos">Pagamentos <span>↓ CSV</span></a></li></ol>
+      <p class="muted">Envie os quatro juntos ou importe na ordem acima.</p>
+    </aside>
+  </div>
+  <section class="database"><div class="section-title"><h2>Registros no banco</h2><span class="muted">{{ database }}</span></div><div id="counts" class="counts" aria-live="polite"></div><p id="database-error" role="alert"></p><p id="clear-result" role="status" aria-live="polite" hidden></p></section>
+  <section class="card history"><h2>Últimas importações</h2><p id="empty-history" class="muted">Nenhum lote importado.</p><div class="table-scroll"><table id="history-table" hidden><thead><tr><th>Lote</th><th>Data</th><th>Resultado</th><th>Inseridas</th><th>Ignoradas</th></tr></thead><tbody id="history"></tbody></table></div></section>
+  <div class="page-actions"><button type="button" class="danger-outline" id="clear-open">Limpar banco</button></div>
+</main>
+<dialog id="clear-dialog" aria-labelledby="clear-title" aria-describedby="clear-description">
+  <h2 id="clear-title">Limpar todas as tabelas?</h2>
+  <p id="clear-description">Todos os dados importados e o histórico de cargas serão excluídos. Essa ação não pode ser desfeita.</p>
+  <p id="clear-error" class="error" role="alert" hidden></p>
+  <div class="dialog-actions"><button type="button" class="secondary" id="clear-cancel" autofocus>Cancelar</button><button type="button" class="danger" id="clear-confirm">Limpar banco</button></div>
+</dialog>
+</body></html>

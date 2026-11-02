@@ -1,0 +1,5 @@
+id_interesse,id_pessoa_mock,id_oficina,data_interesse,faixa_etaria_evento,cidade,origem,status_interesse
+INTT001,PT001,CROCHE,2025-05-01,18-59,Uberlândia,site_mock,registrado
+INTT002,PT002,CROCHE,2025-05-03,18-59,Uberlândia,site_mock,registrado
+INTT003,PT001,BORDADO,2025-05-05,18-59,Uberlândia,indicacao_mock,registrado
+INTT004,PT003,BORDADO,2025-05-06,35-59,Araguari,site_mock,registrado

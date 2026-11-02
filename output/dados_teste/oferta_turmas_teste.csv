@@ -1,0 +1,4 @@
+id_turma,id_oficina,nome_oficina,modalidade,data_inicio,data_fim,vagas_ofertadas,status_turma
+TST001,CROCHE,Crochê,coletiva,2025-06-03,2025-06-03,3,realizada
+TST002,BORDADO,Bordado,coletiva,2025-06-10,2025-06-10,2,realizada
+TST003,PINTURA,Pintura em tecido,coletiva,2025-06-17,2025-06-17,4,realizada

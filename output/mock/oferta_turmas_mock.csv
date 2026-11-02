@@ -1,0 +1,45 @@
+﻿id_turma,id_oficina,nome_oficina,modalidade,data_inicio,data_fim,vagas_ofertadas,status_turma
+T202401,CROCHE,Crochê,coletiva,2024-02-05,2024-02-05,10,realizada
+T202402,BORDADO,Bordado,coletiva,2024-02-19,2024-02-19,10,realizada
+T202403,CROCHE,Crochê,coletiva,2024-03-05,2024-03-05,10,realizada
+T202404,BORDADO,Bordado,coletiva,2024-03-19,2024-03-19,10,realizada
+T202405,CROCHE,Crochê,coletiva,2024-04-05,2024-04-05,10,realizada
+T202406,BORDADO,Bordado,coletiva,2024-04-19,2024-04-19,10,realizada
+T202407,CROCHE,Crochê,coletiva,2024-05-05,2024-05-05,10,realizada
+T202408,BORDADO,Bordado,coletiva,2024-05-19,2024-05-19,10,realizada
+T202409,CROCHE,Crochê,coletiva,2024-06-05,2024-06-05,10,realizada
+T202410,BORDADO,Bordado,coletiva,2024-06-19,2024-06-19,10,realizada
+T202411,CROCHE,Crochê,coletiva,2024-07-05,2024-07-05,10,realizada
+T202412,BORDADO,Bordado,coletiva,2024-07-19,2024-07-19,10,realizada
+T202413,CROCHE,Crochê,coletiva,2024-08-05,2024-08-05,10,realizada
+T202414,BORDADO,Bordado,coletiva,2024-08-19,2024-08-19,10,realizada
+T202415,CROCHE,Crochê,coletiva,2024-09-05,2024-09-05,10,realizada
+T202416,BORDADO,Bordado,coletiva,2024-09-19,2024-09-19,10,realizada
+T202417,CROCHE,Crochê,coletiva,2024-10-05,2024-10-05,10,realizada
+T202418,BORDADO,Bordado,coletiva,2024-10-19,2024-10-19,10,realizada
+T202419,CROCHE,Crochê,coletiva,2024-11-05,2024-11-05,10,realizada
+T202420,BORDADO,Bordado,coletiva,2024-11-19,2024-11-19,10,realizada
+T202421,COLONIA,Colônia de férias,coletiva,2024-01-15,2024-01-15,15,realizada
+T202422,COLONIA,Colônia de férias,coletiva,2024-07-15,2024-07-15,15,realizada
+T202501,CROCHE,Crochê,coletiva,2025-02-05,2025-02-05,10,realizada
+T202502,BORDADO,Bordado,coletiva,2025-02-19,2025-02-19,10,realizada
+T202503,CROCHE,Crochê,coletiva,2025-03-05,2025-03-05,10,realizada
+T202504,BORDADO,Bordado,coletiva,2025-03-19,2025-03-19,10,realizada
+T202505,CROCHE,Crochê,coletiva,2025-04-05,2025-04-05,10,realizada
+T202506,BORDADO,Bordado,coletiva,2025-04-19,2025-04-19,10,realizada
+T202507,CROCHE,Crochê,coletiva,2025-05-05,2025-05-05,10,realizada
+T202508,BORDADO,Bordado,coletiva,2025-05-19,2025-05-19,10,realizada
+T202509,CROCHE,Crochê,coletiva,2025-06-05,2025-06-05,10,realizada
+T202510,BORDADO,Bordado,coletiva,2025-06-19,2025-06-19,10,realizada
+T202511,CROCHE,Crochê,coletiva,2025-07-05,2025-07-05,10,realizada
+T202512,BORDADO,Bordado,coletiva,2025-07-19,2025-07-19,10,realizada
+T202513,CROCHE,Crochê,coletiva,2025-08-05,2025-08-05,10,realizada
+T202514,BORDADO,Bordado,coletiva,2025-08-19,2025-08-19,10,realizada
+T202515,CROCHE,Crochê,coletiva,2025-09-05,2025-09-05,10,realizada
+T202516,BORDADO,Bordado,coletiva,2025-09-19,2025-09-19,10,realizada
+T202517,CROCHE,Crochê,coletiva,2025-10-05,2025-10-05,10,realizada
+T202518,BORDADO,Bordado,coletiva,2025-10-19,2025-10-19,10,realizada
+T202519,CROCHE,Crochê,coletiva,2025-11-05,2025-11-05,10,realizada
+T202520,BORDADO,Bordado,coletiva,2025-11-19,2025-11-19,10,realizada
+T202521,COLONIA,Colônia de férias,coletiva,2025-01-15,2025-01-15,15,realizada
+T202522,COLONIA,Colônia de férias,coletiva,2025-07-15,2025-07-15,15,realizada

@@ -1,0 +1,5 @@
+id_inscricao,id_interesse,id_pessoa_mock,id_turma,id_oficina,data_inscricao,data_confirmacao,faixa_etaria_evento,cidade,status_inscricao,valor_contratado
+IST001,INTT001,PT001,TST001,CROCHE,2025-05-08,2025-05-09,18-59,Uberlândia,confirmada,120.00
+IST002,INTT002,PT002,TST001,CROCHE,2025-05-08,2025-05-10,18-59,Uberlândia,confirmada,80.00
+IST003,INTT003,PT001,TST002,BORDADO,2025-05-12,2025-05-13,18-59,Uberlândia,confirmada,100.00
+IST004,INTT004,PT003,TST002,BORDADO,2025-05-12,2025-05-14,35-59,Araguari,confirmada,50.00

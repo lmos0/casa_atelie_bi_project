@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Ateliê · Entrar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-page">
+  <main class="login-container">
+    <section class="card">
+      <h1>Casa Ateliê</h1>
+      <form class="login-form" method="post" action="{{ url_for('login') }}">
+        <input type="hidden" name="csrf" value="{{ session['csrf'] }}">
+        <label for="username">Usuário</label>
+        <input id="username" name="username" autocomplete="username" required autofocus>
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+        {% if erro %}<p class="error" role="alert">{{ erro }}</p>{% endif %}
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
